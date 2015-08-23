@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nVz-ww-mvq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Title Table View Controller-->
+        <scene sceneID="iE0-wq-btI">
+            <objects>
+                <viewController id="rsV-uV-RQu" customClass="TitleTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xf2-uo-GbW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="rsV-uV-RQu" id="PuY-m6-1IZ"/>
+                            <outlet property="delegate" destination="rsV-uV-RQu" id="25k-Je-hQd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="LKJ-rl-mzB">
+                        <barButtonItem key="leftBarButtonItem" title="编辑" id="GEu-vU-684">
+                            <connections>
+                                <action selector="ediAction:" destination="rsV-uV-RQu" id="sHK-Tt-5Rn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="添加" id="UxH-zw-wxO">
+                            <connections>
+                                <action selector="addThinItem:" destination="rsV-uV-RQu" id="IOl-1a-gOF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tbaleView" destination="xf2-uo-GbW" id="MmI-wp-uVm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ufz-wR-o9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807.5" y="-481.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rdG-l1-K7l">
+            <objects>
+                <navigationController id="nVz-ww-mvq" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rL8-yF-FOE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rsV-uV-RQu" kind="relationship" relationship="rootViewController" id="uY6-s6-Uz2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zYc-h3-pGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272.5" y="-481.5"/>
+        </scene>
+    </scenes>
+</document>

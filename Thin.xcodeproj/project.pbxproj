@@ -1,0 +1,529 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FCB7819D1B89DCF50045155D /* TitleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB7819B1B89DCF50045155D /* TitleTableViewController.m */; };
+		FCB781A31B89E0C30045155D /* ThinDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB781A21B89E0C30045155D /* ThinDefine.m */; };
+		FCB781A41B89E0C30045155D /* ThinDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB781A21B89E0C30045155D /* ThinDefine.m */; };
+		FCB781A91B89E9070045155D /* thinItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB781A81B89E9070045155D /* thinItemModel.m */; };
+		FCB781AA1B89E9070045155D /* thinItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB781A81B89E9070045155D /* thinItemModel.m */; };
+		FCB781AD1B89E91A0045155D /* thinContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB781AC1B89E91A0045155D /* thinContentModel.m */; };
+		FCB781AE1B89E91A0045155D /* thinContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB781AC1B89E91A0045155D /* thinContentModel.m */; };
+		FCE77B491B89C0820015FA5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE77B481B89C0820015FA5F /* main.m */; };
+		FCE77B4C1B89C0820015FA5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE77B4B1B89C0820015FA5F /* AppDelegate.m */; };
+		FCE77B4F1B89C0820015FA5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE77B4E1B89C0820015FA5F /* ViewController.m */; };
+		FCE77B521B89C0820015FA5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE77B501B89C0820015FA5F /* Main.storyboard */; };
+		FCE77B541B89C0820015FA5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE77B531B89C0820015FA5F /* Images.xcassets */; };
+		FCE77B571B89C0820015FA5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE77B551B89C0820015FA5F /* LaunchScreen.xib */; };
+		FCE77B631B89C0820015FA5F /* ThinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE77B621B89C0820015FA5F /* ThinTests.m */; };
+		FDA9E202C32BC133AE524457 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 365BB12111FDFAECC4EA56AE /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCE77B5D1B89C0820015FA5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCE77B3B1B89C0820015FA5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCE77B421B89C0820015FA5F;
+			remoteInfo = Thin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		365BB12111FDFAECC4EA56AE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B940BE9A6FECC3F999A78AC5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EA01D25A774E0C7C6DFD3988 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FCB7819A1B89DCF50045155D /* TitleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleTableViewController.h; sourceTree = "<group>"; };
+		FCB7819B1B89DCF50045155D /* TitleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleTableViewController.m; sourceTree = "<group>"; };
+		FCB781A11B89E0C30045155D /* ThinDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThinDefine.h; sourceTree = "<group>"; };
+		FCB781A21B89E0C30045155D /* ThinDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThinDefine.m; sourceTree = "<group>"; };
+		FCB781A71B89E9070045155D /* thinItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thinItemModel.h; sourceTree = "<group>"; };
+		FCB781A81B89E9070045155D /* thinItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thinItemModel.m; sourceTree = "<group>"; };
+		FCB781AB1B89E91A0045155D /* thinContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thinContentModel.h; sourceTree = "<group>"; };
+		FCB781AC1B89E91A0045155D /* thinContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thinContentModel.m; sourceTree = "<group>"; };
+		FCE77B431B89C0820015FA5F /* Thin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCE77B471B89C0820015FA5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCE77B481B89C0820015FA5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FCE77B4A1B89C0820015FA5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FCE77B4B1B89C0820015FA5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FCE77B4D1B89C0820015FA5F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FCE77B4E1B89C0820015FA5F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FCE77B511B89C0820015FA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCE77B531B89C0820015FA5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FCE77B561B89C0820015FA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FCE77B5C1B89C0820015FA5F /* ThinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCE77B611B89C0820015FA5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCE77B621B89C0820015FA5F /* ThinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThinTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCE77B401B89C0820015FA5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDA9E202C32BC133AE524457 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE77B591B89C0820015FA5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13069DF7953EB21A5E44311C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				365BB12111FDFAECC4EA56AE /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDFD97D4EF736727D4082553 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA01D25A774E0C7C6DFD3988 /* Pods.debug.xcconfig */,
+				B940BE9A6FECC3F999A78AC5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FCE77B3A1B89C0820015FA5F = {
+			isa = PBXGroup;
+			children = (
+				FCE77B451B89C0820015FA5F /* Thin */,
+				FCE77B5F1B89C0820015FA5F /* ThinTests */,
+				FCE77B441B89C0820015FA5F /* Products */,
+				DDFD97D4EF736727D4082553 /* Pods */,
+				13069DF7953EB21A5E44311C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FCE77B441B89C0820015FA5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCE77B431B89C0820015FA5F /* Thin.app */,
+				FCE77B5C1B89C0820015FA5F /* ThinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCE77B451B89C0820015FA5F /* Thin */ = {
+			isa = PBXGroup;
+			children = (
+				FCE77B4A1B89C0820015FA5F /* AppDelegate.h */,
+				FCE77B4B1B89C0820015FA5F /* AppDelegate.m */,
+				FCE77B4D1B89C0820015FA5F /* ViewController.h */,
+				FCE77B4E1B89C0820015FA5F /* ViewController.m */,
+				FCB781A11B89E0C30045155D /* ThinDefine.h */,
+				FCB781A21B89E0C30045155D /* ThinDefine.m */,
+				FCB7819A1B89DCF50045155D /* TitleTableViewController.h */,
+				FCB7819B1B89DCF50045155D /* TitleTableViewController.m */,
+				FCB781A71B89E9070045155D /* thinItemModel.h */,
+				FCB781A81B89E9070045155D /* thinItemModel.m */,
+				FCB781AB1B89E91A0045155D /* thinContentModel.h */,
+				FCB781AC1B89E91A0045155D /* thinContentModel.m */,
+				FCE77B501B89C0820015FA5F /* Main.storyboard */,
+				FCE77B531B89C0820015FA5F /* Images.xcassets */,
+				FCE77B551B89C0820015FA5F /* LaunchScreen.xib */,
+				FCE77B461B89C0820015FA5F /* Supporting Files */,
+			);
+			path = Thin;
+			sourceTree = "<group>";
+		};
+		FCE77B461B89C0820015FA5F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCE77B471B89C0820015FA5F /* Info.plist */,
+				FCE77B481B89C0820015FA5F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FCE77B5F1B89C0820015FA5F /* ThinTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCE77B621B89C0820015FA5F /* ThinTests.m */,
+				FCE77B601B89C0820015FA5F /* Supporting Files */,
+			);
+			path = ThinTests;
+			sourceTree = "<group>";
+		};
+		FCE77B601B89C0820015FA5F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCE77B611B89C0820015FA5F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCE77B421B89C0820015FA5F /* Thin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCE77B661B89C0820015FA5F /* Build configuration list for PBXNativeTarget "Thin" */;
+			buildPhases = (
+				24AE20521DC3172551AACF34 /* Check Pods Manifest.lock */,
+				FCE77B3F1B89C0820015FA5F /* Sources */,
+				FCE77B401B89C0820015FA5F /* Frameworks */,
+				FCE77B411B89C0820015FA5F /* Resources */,
+				E3FC0F7512E42FDB4EB34B5E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Thin;
+			productName = Thin;
+			productReference = FCE77B431B89C0820015FA5F /* Thin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FCE77B5B1B89C0820015FA5F /* ThinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCE77B691B89C0820015FA5F /* Build configuration list for PBXNativeTarget "ThinTests" */;
+			buildPhases = (
+				FCE77B581B89C0820015FA5F /* Sources */,
+				FCE77B591B89C0820015FA5F /* Frameworks */,
+				FCE77B5A1B89C0820015FA5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCE77B5E1B89C0820015FA5F /* PBXTargetDependency */,
+			);
+			name = ThinTests;
+			productName = ThinTests;
+			productReference = FCE77B5C1B89C0820015FA5F /* ThinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCE77B3B1B89C0820015FA5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "求攻略";
+				TargetAttributes = {
+					FCE77B421B89C0820015FA5F = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = TQ9SH2L35G;
+					};
+					FCE77B5B1B89C0820015FA5F = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = FCE77B421B89C0820015FA5F;
+					};
+				};
+			};
+			buildConfigurationList = FCE77B3E1B89C0820015FA5F /* Build configuration list for PBXProject "Thin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCE77B3A1B89C0820015FA5F;
+			productRefGroup = FCE77B441B89C0820015FA5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCE77B421B89C0820015FA5F /* Thin */,
+				FCE77B5B1B89C0820015FA5F /* ThinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCE77B411B89C0820015FA5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCE77B521B89C0820015FA5F /* Main.storyboard in Resources */,
+				FCE77B571B89C0820015FA5F /* LaunchScreen.xib in Resources */,
+				FCE77B541B89C0820015FA5F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE77B5A1B89C0820015FA5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24AE20521DC3172551AACF34 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E3FC0F7512E42FDB4EB34B5E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCE77B3F1B89C0820015FA5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCE77B4F1B89C0820015FA5F /* ViewController.m in Sources */,
+				FCB781A31B89E0C30045155D /* ThinDefine.m in Sources */,
+				FCE77B4C1B89C0820015FA5F /* AppDelegate.m in Sources */,
+				FCB7819D1B89DCF50045155D /* TitleTableViewController.m in Sources */,
+				FCB781AD1B89E91A0045155D /* thinContentModel.m in Sources */,
+				FCE77B491B89C0820015FA5F /* main.m in Sources */,
+				FCB781A91B89E9070045155D /* thinItemModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCE77B581B89C0820015FA5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCB781A41B89E0C30045155D /* ThinDefine.m in Sources */,
+				FCB781AA1B89E9070045155D /* thinItemModel.m in Sources */,
+				FCE77B631B89C0820015FA5F /* ThinTests.m in Sources */,
+				FCB781AE1B89E91A0045155D /* thinContentModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCE77B5E1B89C0820015FA5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCE77B421B89C0820015FA5F /* Thin */;
+			targetProxy = FCE77B5D1B89C0820015FA5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FCE77B501B89C0820015FA5F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCE77B511B89C0820015FA5F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCE77B551B89C0820015FA5F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCE77B561B89C0820015FA5F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCE77B641B89C0820015FA5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FCE77B651B89C0820015FA5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCE77B671B89C0820015FA5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA01D25A774E0C7C6DFD3988 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Thin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FCE77B681B89C0820015FA5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B940BE9A6FECC3F999A78AC5 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Thin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FCE77B6A1B89C0820015FA5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ThinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thin.app/Thin";
+			};
+			name = Debug;
+		};
+		FCE77B6B1B89C0820015FA5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ThinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Thin.app/Thin";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCE77B3E1B89C0820015FA5F /* Build configuration list for PBXProject "Thin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE77B641B89C0820015FA5F /* Debug */,
+				FCE77B651B89C0820015FA5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCE77B661B89C0820015FA5F /* Build configuration list for PBXNativeTarget "Thin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE77B671B89C0820015FA5F /* Debug */,
+				FCE77B681B89C0820015FA5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCE77B691B89C0820015FA5F /* Build configuration list for PBXNativeTarget "ThinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCE77B6A1B89C0820015FA5F /* Debug */,
+				FCE77B6B1B89C0820015FA5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCE77B3B1B89C0820015FA5F /* Project object */;
+}
