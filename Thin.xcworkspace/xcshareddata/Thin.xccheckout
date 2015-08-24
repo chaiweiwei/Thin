@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AF50160D-818B-4D70-8B0F-9CFDA2049CE1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Thin</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1B7115BA84AE59A3138C13A67F13623539E3914E</key>
+		<string>github.com:chaiweiwei/Thin.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Thin.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1B7115BA84AE59A3138C13A67F13623539E3914E</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:chaiweiwei/Thin.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1B7115BA84AE59A3138C13A67F13623539E3914E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1B7115BA84AE59A3138C13A67F13623539E3914E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Thin</string>
+		</dict>
+	</array>
+</dict>
+</plist>

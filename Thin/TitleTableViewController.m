@@ -176,6 +176,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     
@@ -185,11 +187,9 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if([segue.identifier isEqualToString:@"content"]) {
-        ContentTableViewController *vc = [[ContentTableViewController alloc] init];
+        ContentTableViewController *vc = segue.destinationViewController;
         NSInteger row = [self.tableView indexPathForCell:sender].row;
         vc.thinItemName = _thinItemList[row][@"name"];
-        
-        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 @end

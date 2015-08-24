@@ -11,7 +11,6 @@
 @interface thinItemModel : NSObject
 
 @property (nonatomic,copy) NSString *name;
-@property (nonatomic,copy) NSString *desc;
 @property (nonatomic,copy) NSArray *itemList;
 
 @end

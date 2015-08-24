@@ -11,7 +11,6 @@
 		FCB781A31B89E0C30045155D /* ThinDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB781A21B89E0C30045155D /* ThinDefine.m */; };
 		FCB781A41B89E0C30045155D /* ThinDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB781A21B89E0C30045155D /* ThinDefine.m */; };
 		FCB781A91B89E9070045155D /* thinItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB781A81B89E9070045155D /* thinItemModel.m */; };
-		FCB781AA1B89E9070045155D /* thinItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB781A81B89E9070045155D /* thinItemModel.m */; };
 		FCB781AD1B89E91A0045155D /* thinContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB781AC1B89E91A0045155D /* thinContentModel.m */; };
 		FCB781AE1B89E91A0045155D /* thinContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB781AC1B89E91A0045155D /* thinContentModel.m */; };
 		FCE77B491B89C0820015FA5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE77B481B89C0820015FA5F /* main.m */; };
@@ -323,7 +322,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCB781A41B89E0C30045155D /* ThinDefine.m in Sources */,
-				FCB781AA1B89E9070045155D /* thinItemModel.m in Sources */,
 				FCE77B631B89C0820015FA5F /* ThinTests.m in Sources */,
 				FCB781AE1B89E91A0045155D /* thinContentModel.m in Sources */,
 			);

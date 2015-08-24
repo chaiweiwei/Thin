@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Title Table View Controller-->
@@ -17,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TBm-KO-SeI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="627"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TBm-KO-SeI">
+                                <rect key="frame" x="0.0" y="1" width="375" height="627"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="001-cI-Cdt" id="LV9-8L-eKk"/>
@@ -84,38 +85,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OtO-aS-RcV">
-                                <rect key="frame" x="0.0" y="64" width="375" height="563"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OtO-aS-RcV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="627"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="XSt-bq-d7f" id="TDp-0d-WJM"/>
                                     <outlet property="delegate" destination="XSt-bq-d7f" id="9E6-cW-maC"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYg-mr-4lC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NG6-xf-U1W">
                                 <rect key="frame" x="0.0" y="627" width="375" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YQx-dS-geJ"/>
+                                </constraints>
                                 <state key="normal" title="未保存">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveAction:" destination="XSt-bq-d7f" eventType="touchUpInside" id="9DT-0H-qhA"/>
-                                    <action selector="saveAction:" destination="001-cI-Cdt" eventType="touchUpInside" id="oxe-8G-ZRF"/>
+                                    <action selector="saveAction:" destination="XSt-bq-d7f" eventType="touchUpInside" id="CWl-Ne-iFa"/>
+                                    <action selector="saveAction:" destination="001-cI-Cdt" eventType="touchUpInside" id="CZf-72-nPM"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="NG6-xf-U1W" firstAttribute="bottom" secondItem="ZC6-3l-Xoa" secondAttribute="top" id="6j4-vZ-EZy"/>
                             <constraint firstItem="OtO-aS-RcV" firstAttribute="leading" secondItem="Zui-OJ-ezF" secondAttribute="leading" id="ALX-w4-F5l"/>
-                            <constraint firstAttribute="trailing" secondItem="nYg-mr-4lC" secondAttribute="trailing" id="IpX-Tb-1CH"/>
+                            <constraint firstItem="NG6-xf-U1W" firstAttribute="leading" secondItem="OtO-aS-RcV" secondAttribute="leading" id="FaV-Vi-dRD"/>
                             <constraint firstAttribute="trailing" secondItem="OtO-aS-RcV" secondAttribute="trailing" id="K8O-IW-5kN"/>
                             <constraint firstItem="OtO-aS-RcV" firstAttribute="top" secondItem="wus-hg-bQX" secondAttribute="bottom" id="Xfy-gT-bCG"/>
-                            <constraint firstItem="nYg-mr-4lC" firstAttribute="top" secondItem="OtO-aS-RcV" secondAttribute="bottom" id="is2-kQ-OEb"/>
-                            <constraint firstItem="nYg-mr-4lC" firstAttribute="leading" secondItem="Zui-OJ-ezF" secondAttribute="leading" id="jQj-of-Q97"/>
-                            <constraint firstItem="nYg-mr-4lC" firstAttribute="top" secondItem="OtO-aS-RcV" secondAttribute="bottom" id="sj0-h4-aCd"/>
-                            <constraint firstItem="ZC6-3l-Xoa" firstAttribute="top" secondItem="nYg-mr-4lC" secondAttribute="bottom" id="vqy-5a-H0h"/>
+                            <constraint firstItem="NG6-xf-U1W" firstAttribute="trailing" secondItem="OtO-aS-RcV" secondAttribute="trailing" id="iaT-zj-RdK"/>
+                            <constraint firstItem="NG6-xf-U1W" firstAttribute="top" secondItem="OtO-aS-RcV" secondAttribute="bottom" id="k6F-7W-VcM"/>
+                            <constraint firstItem="OtO-aS-RcV" firstAttribute="top" secondItem="Zui-OJ-ezF" secondAttribute="topMargin" id="s08-ba-BgY"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Xfy-gT-bCG"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="cPR-9f-ZTz">
                         <barButtonItem key="rightBarButtonItem" title="添加" id="7BG-V0-3Y5">
@@ -126,7 +135,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="saveButton" destination="nYg-mr-4lC" id="zHZ-K1-m6D"/>
+                        <outlet property="saveButton" destination="NG6-xf-U1W" id="b4t-DM-X0T"/>
                         <outlet property="tableView" destination="OtO-aS-RcV" id="qRe-KE-QSi"/>
                     </connections>
                 </viewController>
