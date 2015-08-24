@@ -6,38 +6,133 @@
     </dependencies>
     <scenes>
         <!--Title Table View Controller-->
-        <scene sceneID="iE0-wq-btI">
+        <scene sceneID="D7N-4f-c7C">
             <objects>
-                <viewController id="rsV-uV-RQu" customClass="TitleTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xf2-uo-GbW">
+                <viewController id="001-cI-Cdt" customClass="TitleTableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sWq-Mj-Krn"/>
+                        <viewControllerLayoutGuide type="bottom" id="WqY-U5-N9y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ulP-1y-2ne">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TBm-KO-SeI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="627"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="001-cI-Cdt" id="LV9-8L-eKk"/>
+                                    <outlet property="delegate" destination="001-cI-Cdt" id="Nh5-jf-IBk"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cK-3N-AIN">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="未保存">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveAction:" destination="001-cI-Cdt" eventType="touchUpInside" id="pbz-S1-zpV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="rsV-uV-RQu" id="PuY-m6-1IZ"/>
-                            <outlet property="delegate" destination="rsV-uV-RQu" id="25k-Je-hQd"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="LKJ-rl-mzB">
-                        <barButtonItem key="leftBarButtonItem" title="编辑" id="GEu-vU-684">
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="TBm-KO-SeI" secondAttribute="trailing" id="2J7-5U-rSb"/>
+                            <constraint firstAttribute="trailing" secondItem="9cK-3N-AIN" secondAttribute="trailing" id="4a7-E9-rjr"/>
+                            <constraint firstItem="TBm-KO-SeI" firstAttribute="leading" secondItem="ulP-1y-2ne" secondAttribute="leading" id="4pM-w5-Xs8"/>
+                            <constraint firstItem="WqY-U5-N9y" firstAttribute="top" secondItem="TBm-KO-SeI" secondAttribute="bottom" constant="40" id="QOa-du-2EN"/>
+                            <constraint firstItem="9cK-3N-AIN" firstAttribute="leading" secondItem="ulP-1y-2ne" secondAttribute="leading" id="oIb-wY-NVU"/>
+                            <constraint firstItem="9cK-3N-AIN" firstAttribute="top" secondItem="TBm-KO-SeI" secondAttribute="bottom" id="oup-Jz-vij"/>
+                            <constraint firstItem="TBm-KO-SeI" firstAttribute="top" secondItem="ulP-1y-2ne" secondAttribute="top" id="xZk-Mh-GBf"/>
+                            <constraint firstItem="WqY-U5-N9y" firstAttribute="top" secondItem="9cK-3N-AIN" secondAttribute="bottom" id="y1y-gd-x6Y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dJn-8U-bI0">
+                        <barButtonItem key="leftBarButtonItem" title="编辑" id="8PH-BE-AXa">
                             <connections>
-                                <action selector="ediAction:" destination="rsV-uV-RQu" id="sHK-Tt-5Rn"/>
+                                <action selector="ediAction:" destination="001-cI-Cdt" id="bTs-x1-qJe"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="添加" id="UxH-zw-wxO">
+                        <barButtonItem key="rightBarButtonItem" title="添加" id="aCN-or-Yg7">
                             <connections>
-                                <action selector="addThinItem:" destination="rsV-uV-RQu" id="IOl-1a-gOF"/>
+                                <action selector="addThinItem:" destination="001-cI-Cdt" id="Loj-lW-RKq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="tbaleView" destination="xf2-uo-GbW" id="MmI-wp-uVm"/>
+                        <outlet property="saveButton" destination="9cK-3N-AIN" id="laf-Jr-ShF"/>
+                        <outlet property="tableView" destination="TBm-KO-SeI" id="QpR-ZI-B1c"/>
+                        <segue destination="XSt-bq-d7f" kind="push" identifier="content" id="WIS-Os-f7N"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ufz-wR-o9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aA0-vp-dCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807.5" y="-481.5"/>
+            <point key="canvasLocation" x="744.5" y="-481.5"/>
+        </scene>
+        <!--Content Table View Controller-->
+        <scene sceneID="Xo1-vF-ioN">
+            <objects>
+                <viewController id="XSt-bq-d7f" customClass="ContentTableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wus-hg-bQX"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZC6-3l-Xoa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zui-OJ-ezF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OtO-aS-RcV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="563"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="XSt-bq-d7f" id="TDp-0d-WJM"/>
+                                    <outlet property="delegate" destination="XSt-bq-d7f" id="9E6-cW-maC"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYg-mr-4lC">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="未保存">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveAction:" destination="XSt-bq-d7f" eventType="touchUpInside" id="9DT-0H-qhA"/>
+                                    <action selector="saveAction:" destination="001-cI-Cdt" eventType="touchUpInside" id="oxe-8G-ZRF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OtO-aS-RcV" firstAttribute="leading" secondItem="Zui-OJ-ezF" secondAttribute="leading" id="ALX-w4-F5l"/>
+                            <constraint firstAttribute="trailing" secondItem="nYg-mr-4lC" secondAttribute="trailing" id="IpX-Tb-1CH"/>
+                            <constraint firstAttribute="trailing" secondItem="OtO-aS-RcV" secondAttribute="trailing" id="K8O-IW-5kN"/>
+                            <constraint firstItem="OtO-aS-RcV" firstAttribute="top" secondItem="wus-hg-bQX" secondAttribute="bottom" id="Xfy-gT-bCG"/>
+                            <constraint firstItem="nYg-mr-4lC" firstAttribute="top" secondItem="OtO-aS-RcV" secondAttribute="bottom" id="is2-kQ-OEb"/>
+                            <constraint firstItem="nYg-mr-4lC" firstAttribute="leading" secondItem="Zui-OJ-ezF" secondAttribute="leading" id="jQj-of-Q97"/>
+                            <constraint firstItem="nYg-mr-4lC" firstAttribute="top" secondItem="OtO-aS-RcV" secondAttribute="bottom" id="sj0-h4-aCd"/>
+                            <constraint firstItem="ZC6-3l-Xoa" firstAttribute="top" secondItem="nYg-mr-4lC" secondAttribute="bottom" id="vqy-5a-H0h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cPR-9f-ZTz">
+                        <barButtonItem key="rightBarButtonItem" title="添加" id="7BG-V0-3Y5">
+                            <connections>
+                                <action selector="addContent:" destination="XSt-bq-d7f" id="43h-uM-ftg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="saveButton" destination="nYg-mr-4lC" id="zHZ-K1-m6D"/>
+                        <outlet property="tableView" destination="OtO-aS-RcV" id="qRe-KE-QSi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zMB-iH-3ZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1178.5" y="-481.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rdG-l1-K7l">
@@ -49,7 +144,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="rsV-uV-RQu" kind="relationship" relationship="rootViewController" id="uY6-s6-Uz2"/>
+                        <segue destination="001-cI-Cdt" kind="relationship" relationship="rootViewController" id="oUU-4m-OnF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYc-h3-pGY" userLabel="First Responder" sceneMemberID="firstResponder"/>

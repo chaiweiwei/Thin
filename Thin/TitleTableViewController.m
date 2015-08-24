@@ -12,8 +12,9 @@
 #import "ViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
+#import "ContentTableViewController.h"
 
-@interface TitleTableViewController ()<UIAlertViewDelegate>
+@interface TitleTableViewController ()<UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,assign) BOOL rightPW;
 
@@ -28,28 +29,7 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"密码" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    alert.tag= 11;
-    UITextField *textField = [[UITextField alloc] init];
-    textField.backgroundColor = [UIColor whiteColor];
-    textField.frame = CGRectMake(alert.center.x+65,alert.center.y+48, 150,23);
-    [alert addSubview:textField];
-    
-    [alert show];
-    
-    @weakify(self);
-
-
-    [RACObserve(self, rightPW) subscribeNext:^(id x) {
-        @strongify(self);
-        
-        if(self.rightPW) {
-            _thinItemList = [NSKeyedUnarchiver unarchiveObjectWithFile:[self getFilePath].path];
-            [self.tableView reloadData];
-        }
-
-    }];
+    [self.saveButton setTitle:@"未保存" forState:UIControlStateNormal];
 }
 
 - (NSURL *)getFilePath {
@@ -97,8 +77,6 @@
                 
                 self.thinItemList = [tempArray copy];
                 
-                [NSKeyedArchiver archiveRootObject:_thinItemList toFile:[self getFilePath].path];
-                
                 [self.tableView reloadData];
                 
             }
@@ -118,6 +96,36 @@
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"titleCell"];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"密码" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    alert.tag= 11;
+    UITextField *textField = [[UITextField alloc] init];
+    textField.backgroundColor = [UIColor whiteColor];
+    textField.frame = CGRectMake(alert.center.x+65,alert.center.y+48, 150,23);
+    [alert addSubview:textField];
+    
+    [alert show];
+    
+    @weakify(self);
+    
+    
+    [RACObserve(self, rightPW) subscribeNext:^(id x) {
+        @strongify(self);
+        
+        if(self.rightPW) {
+            _thinItemList = [NSKeyedUnarchiver unarchiveObjectWithFile:[self getFilePath].path];
+            [self.tableView reloadData];
+        }
+        
+    }];
+
+}
+
+- (IBAction)saveAction:(id)sender {
+    [NSKeyedArchiver archiveRootObject:_thinItemList toFile:[self getFilePath].path];
+    
+    [sender setTitle:@"已保存" forState:UIControlStateNormal];
 }
 
 - (IBAction)ediAction:(id)sender {
@@ -168,8 +176,20 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ViewController *vc = [[ViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    
+    [self performSegueWithIdentifier:@"content" sender:cell];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if([segue.identifier isEqualToString:@"content"]) {
+        ContentTableViewController *vc = [[ContentTableViewController alloc] init];
+        NSInteger row = [self.tableView indexPathForCell:sender].row;
+        vc.thinItemName = _thinItemList[row][@"name"];
+        
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
 @end

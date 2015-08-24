@@ -21,6 +21,7 @@
 		FCE77B541B89C0820015FA5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE77B531B89C0820015FA5F /* Images.xcassets */; };
 		FCE77B571B89C0820015FA5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE77B551B89C0820015FA5F /* LaunchScreen.xib */; };
 		FCE77B631B89C0820015FA5F /* ThinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE77B621B89C0820015FA5F /* ThinTests.m */; };
+		FCEBA65A1B8AAC4F001FCAB9 /* ContentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEBA6591B8AAC4F001FCAB9 /* ContentTableViewController.m */; };
 		FDA9E202C32BC133AE524457 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 365BB12111FDFAECC4EA56AE /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,8 @@
 		FCE77B5C1B89C0820015FA5F /* ThinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE77B611B89C0820015FA5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCE77B621B89C0820015FA5F /* ThinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThinTests.m; sourceTree = "<group>"; };
+		FCEBA6581B8AAC4F001FCAB9 /* ContentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTableViewController.h; sourceTree = "<group>"; };
+		FCEBA6591B8AAC4F001FCAB9 /* ContentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				FCB781A21B89E0C30045155D /* ThinDefine.m */,
 				FCB7819A1B89DCF50045155D /* TitleTableViewController.h */,
 				FCB7819B1B89DCF50045155D /* TitleTableViewController.m */,
+				FCEBA6581B8AAC4F001FCAB9 /* ContentTableViewController.h */,
+				FCEBA6591B8AAC4F001FCAB9 /* ContentTableViewController.m */,
 				FCB781A71B89E9070045155D /* thinItemModel.h */,
 				FCB781A81B89E9070045155D /* thinItemModel.m */,
 				FCB781AB1B89E91A0045155D /* thinContentModel.h */,
@@ -303,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCE77B4F1B89C0820015FA5F /* ViewController.m in Sources */,
+				FCEBA65A1B8AAC4F001FCAB9 /* ContentTableViewController.m in Sources */,
 				FCB781A31B89E0C30045155D /* ThinDefine.m in Sources */,
 				FCE77B4C1B89C0820015FA5F /* AppDelegate.m in Sources */,
 				FCB7819D1B89DCF50045155D /* TitleTableViewController.m in Sources */,
