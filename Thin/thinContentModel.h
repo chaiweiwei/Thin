@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 求攻略. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Mantle/Mantle.h>
 
-@interface thinContentModel : NSObject
+@interface thinContentModel : MTLModel<MTLJSONSerializing>
 
 //@property (nonatomic,copy) NSNumber *abdomenDown;
 //@property (nonatomic,copy) NSString *abdomenDownDesc;

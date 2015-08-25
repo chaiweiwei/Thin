@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InputPasswordView.h"
 
 @interface PassWordViewController : UIViewController
+@property (weak, nonatomic) IBOutlet InputPasswordView *passWordView;
 
 @end

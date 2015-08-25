@@ -7,11 +7,8 @@
 //
 
 #import "TitleTableViewController.h"
-#import "ThinDefine.h"
 #import "thinItemModel.h"
 #import "ViewController.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
-#import <ReactiveCocoa/RACEXTScope.h>
 #import "ContentTableViewController.h"
 
 @interface TitleTableViewController ()<UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate>
@@ -30,13 +27,14 @@
     [super viewWillAppear:animated];
     
     [self.saveButton setTitle:@"未保存" forState:UIControlStateNormal];
+
 }
 
 - (NSURL *)getFilePath {
 
     NSURL *url = [[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask].lastObject;
     
-    url = [url URLByAppendingPathComponent:@"content"];
+    url = [url URLByAppendingPathComponent:@"content.plist"];
     
     return url;
 }
@@ -81,14 +79,7 @@
                 
             }
 
-            break;
-        case 11:
-
-            if(buttonIndex == 1 && [text.text isEqualToString:@"chaiweiwei"]) {
-                self.rightPW = YES;
-            }
-            
-            break;
+        break;
     }
 }
 
@@ -96,29 +87,9 @@
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"titleCell"];
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"密码" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-    alert.tag= 11;
-    UITextField *textField = [[UITextField alloc] init];
-    textField.backgroundColor = [UIColor whiteColor];
-    textField.frame = CGRectMake(alert.center.x+65,alert.center.y+48, 150,23);
-    [alert addSubview:textField];
-    
-    [alert show];
-    
-    @weakify(self);
-    
-    
-    [RACObserve(self, rightPW) subscribeNext:^(id x) {
-        @strongify(self);
-        
-        if(self.rightPW) {
-            _thinItemList = [NSKeyedUnarchiver unarchiveObjectWithFile:[self getFilePath].path];
-            [self.tableView reloadData];
-        }
-        
-    }];
+
+    _thinItemList = [NSKeyedUnarchiver unarchiveObjectWithFile:[self getFilePath].path];
+    [self.tableView reloadData];
 
 }
 

@@ -7,9 +7,12 @@
 //
 
 #import "AppDelegate.h"
-#import "ThinDefine.h"
+#import <sqlite3.h>
 
 @interface AppDelegate ()<UIAlertViewDelegate>
+{
+    sqlite3 *database;
+}
 
 @end
 
@@ -17,7 +20,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *path = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].lastObject;
+    
+    NSString *dbFile = [path.path stringByAppendingPathComponent:@"thin.db"];
+    
+    if(![fileManager fileExistsAtPath:dbFile]) {
+        NSString *fromPath = [[NSBundle mainBundle] pathForResource:@"thin.db" ofType:nil];
+        
+        [fileManager copyItemAtPath:fromPath toPath:dbFile error:nil];
+    }
+    
+    if(sqlite3_open([dbFile UTF8String], &database) != SQLITE_OK) {
+        NSAssert1(0, @"Failed to open database with message '%s'.", sqlite3_errmsg(database));
+    }
+    
+    sqlite3_close(database);
+    
     return YES;
 }
 

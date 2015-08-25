@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="1404.5" y="-481.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Pass Word View Controller-->
         <scene sceneID="Qs0-yz-64E">
             <objects>
-                <viewController id="XZA-xQ-RPZ" sceneMemberID="viewController">
+                <viewController id="XZA-xQ-RPZ" customClass="PassWordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MZB-MC-OL0"/>
                         <viewControllerLayoutGuide type="bottom" id="qTB-wn-3O5"/>
@@ -103,6 +103,7 @@
                     <navigationItem key="navigationItem" id="YR4-8Q-TDv"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="passWordView" destination="ncz-Ah-l1g" id="aJZ-d0-F9x"/>
                         <segue destination="001-cI-Cdt" kind="push" identifier="title" id="qSn-44-1oY"/>
                     </connections>
                 </viewController>

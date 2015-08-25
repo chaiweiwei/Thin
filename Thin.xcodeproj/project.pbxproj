@@ -22,6 +22,10 @@
 		FCE77B631B89C0820015FA5F /* ThinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE77B621B89C0820015FA5F /* ThinTests.m */; };
 		FCEAC5831B8C028600A64733 /* InputPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEAC5821B8C028600A64733 /* InputPasswordView.m */; };
 		FCEAC5861B8C041200A64733 /* PassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEAC5851B8C041200A64733 /* PassWordViewController.m */; };
+		FCEAC58D1B8C32EB00A64733 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEAC58C1B8C32EB00A64733 /* libsqlite3.0.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
+		FCEAC5911B8C33BF00A64733 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEAC5901B8C33BF00A64733 /* DBManager.m */; };
+		FCEAC5941B8C4D3700A64733 /* thin.db in Resources */ = {isa = PBXBuildFile; fileRef = FCEAC5931B8C4D3700A64733 /* thin.db */; };
+		FCEAC5951B8C4D3700A64733 /* thin.db in Resources */ = {isa = PBXBuildFile; fileRef = FCEAC5931B8C4D3700A64733 /* thin.db */; };
 		FCEBA65A1B8AAC4F001FCAB9 /* ContentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEBA6591B8AAC4F001FCAB9 /* ContentTableViewController.m */; };
 		FDA9E202C32BC133AE524457 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 365BB12111FDFAECC4EA56AE /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -66,6 +70,10 @@
 		FCEAC5841B8C041200A64733 /* PassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassWordViewController.h; sourceTree = "<group>"; };
 		FCEAC5851B8C041200A64733 /* PassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassWordViewController.m; sourceTree = "<group>"; };
 		FCEAC58B1B8C04EC00A64733 /* Thin-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Thin-Prefix.pch"; sourceTree = "<group>"; };
+		FCEAC58C1B8C32EB00A64733 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		FCEAC58F1B8C33BF00A64733 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		FCEAC5901B8C33BF00A64733 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		FCEAC5931B8C4D3700A64733 /* thin.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = thin.db; sourceTree = "<group>"; };
 		FCEBA6581B8AAC4F001FCAB9 /* ContentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTableViewController.h; sourceTree = "<group>"; };
 		FCEBA6591B8AAC4F001FCAB9 /* ContentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCEAC58D1B8C32EB00A64733 /* libsqlite3.0.dylib in Frameworks */,
 				FDA9E202C32BC133AE524457 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +101,7 @@
 		13069DF7953EB21A5E44311C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCEAC58C1B8C32EB00A64733 /* libsqlite3.0.dylib */,
 				365BB12111FDFAECC4EA56AE /* libPods.a */,
 			);
 			name = Frameworks;
@@ -129,6 +139,8 @@
 		FCE77B451B89C0820015FA5F /* Thin */ = {
 			isa = PBXGroup;
 			children = (
+				FCEAC5931B8C4D3700A64733 /* thin.db */,
+				FCEAC58E1B8C33AB00A64733 /* DB */,
 				FCEAC58A1B8C044700A64733 /* Until */,
 				FCEAC5891B8C043600A64733 /* View */,
 				FCEAC5881B8C042700A64733 /* Model */,
@@ -212,6 +224,15 @@
 				FCB781A21B89E0C30045155D /* ThinDefine.m */,
 			);
 			name = Until;
+			sourceTree = "<group>";
+		};
+		FCEAC58E1B8C33AB00A64733 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				FCEAC58F1B8C33BF00A64733 /* DBManager.h */,
+				FCEAC5901B8C33BF00A64733 /* DBManager.m */,
+			);
+			name = DB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +320,7 @@
 			files = (
 				FCE77B521B89C0820015FA5F /* Main.storyboard in Resources */,
 				FCE77B571B89C0820015FA5F /* LaunchScreen.xib in Resources */,
+				FCEAC5941B8C4D3700A64733 /* thin.db in Resources */,
 				FCE77B541B89C0820015FA5F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCEAC5951B8C4D3700A64733 /* thin.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +380,7 @@
 				FCE77B4C1B89C0820015FA5F /* AppDelegate.m in Sources */,
 				FCB7819D1B89DCF50045155D /* TitleTableViewController.m in Sources */,
 				FCB781AD1B89E91A0045155D /* thinContentModel.m in Sources */,
+				FCEAC5911B8C33BF00A64733 /* DBManager.m in Sources */,
 				FCE77B491B89C0820015FA5F /* main.m in Sources */,
 				FCEAC5831B8C028600A64733 /* InputPasswordView.m in Sources */,
 				FCB781A91B89E9070045155D /* thinItemModel.m in Sources */,
@@ -515,6 +539,7 @@
 		};
 		FCE77B6A1B89C0820015FA5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA01D25A774E0C7C6DFD3988 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -534,6 +559,7 @@
 		};
 		FCE77B6B1B89C0820015FA5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B940BE9A6FECC3F999A78AC5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
