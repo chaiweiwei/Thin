@@ -20,6 +20,8 @@
 		FCE77B541B89C0820015FA5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE77B531B89C0820015FA5F /* Images.xcassets */; };
 		FCE77B571B89C0820015FA5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE77B551B89C0820015FA5F /* LaunchScreen.xib */; };
 		FCE77B631B89C0820015FA5F /* ThinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE77B621B89C0820015FA5F /* ThinTests.m */; };
+		FCEAC5831B8C028600A64733 /* InputPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEAC5821B8C028600A64733 /* InputPasswordView.m */; };
+		FCEAC5861B8C041200A64733 /* PassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEAC5851B8C041200A64733 /* PassWordViewController.m */; };
 		FCEBA65A1B8AAC4F001FCAB9 /* ContentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEBA6591B8AAC4F001FCAB9 /* ContentTableViewController.m */; };
 		FDA9E202C32BC133AE524457 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 365BB12111FDFAECC4EA56AE /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,11 @@
 		FCE77B5C1B89C0820015FA5F /* ThinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE77B611B89C0820015FA5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCE77B621B89C0820015FA5F /* ThinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThinTests.m; sourceTree = "<group>"; };
+		FCEAC5811B8C028600A64733 /* InputPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPasswordView.h; sourceTree = "<group>"; };
+		FCEAC5821B8C028600A64733 /* InputPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPasswordView.m; sourceTree = "<group>"; };
+		FCEAC5841B8C041200A64733 /* PassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassWordViewController.h; sourceTree = "<group>"; };
+		FCEAC5851B8C041200A64733 /* PassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassWordViewController.m; sourceTree = "<group>"; };
+		FCEAC58B1B8C04EC00A64733 /* Thin-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Thin-Prefix.pch"; sourceTree = "<group>"; };
 		FCEBA6581B8AAC4F001FCAB9 /* ContentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTableViewController.h; sourceTree = "<group>"; };
 		FCEBA6591B8AAC4F001FCAB9 /* ContentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,20 +129,14 @@
 		FCE77B451B89C0820015FA5F /* Thin */ = {
 			isa = PBXGroup;
 			children = (
+				FCEAC58A1B8C044700A64733 /* Until */,
+				FCEAC5891B8C043600A64733 /* View */,
+				FCEAC5881B8C042700A64733 /* Model */,
+				FCEAC5871B8C041600A64733 /* ViewController */,
 				FCE77B4A1B89C0820015FA5F /* AppDelegate.h */,
 				FCE77B4B1B89C0820015FA5F /* AppDelegate.m */,
 				FCE77B4D1B89C0820015FA5F /* ViewController.h */,
 				FCE77B4E1B89C0820015FA5F /* ViewController.m */,
-				FCB781A11B89E0C30045155D /* ThinDefine.h */,
-				FCB781A21B89E0C30045155D /* ThinDefine.m */,
-				FCB7819A1B89DCF50045155D /* TitleTableViewController.h */,
-				FCB7819B1B89DCF50045155D /* TitleTableViewController.m */,
-				FCEBA6581B8AAC4F001FCAB9 /* ContentTableViewController.h */,
-				FCEBA6591B8AAC4F001FCAB9 /* ContentTableViewController.m */,
-				FCB781A71B89E9070045155D /* thinItemModel.h */,
-				FCB781A81B89E9070045155D /* thinItemModel.m */,
-				FCB781AB1B89E91A0045155D /* thinContentModel.h */,
-				FCB781AC1B89E91A0045155D /* thinContentModel.m */,
 				FCE77B501B89C0820015FA5F /* Main.storyboard */,
 				FCE77B531B89C0820015FA5F /* Images.xcassets */,
 				FCE77B551B89C0820015FA5F /* LaunchScreen.xib */,
@@ -149,6 +150,7 @@
 			children = (
 				FCE77B471B89C0820015FA5F /* Info.plist */,
 				FCE77B481B89C0820015FA5F /* main.m */,
+				FCEAC58B1B8C04EC00A64733 /* Thin-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -168,6 +170,48 @@
 				FCE77B611B89C0820015FA5F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FCEAC5871B8C041600A64733 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FCB781A71B89E9070045155D /* thinItemModel.h */,
+				FCB781A81B89E9070045155D /* thinItemModel.m */,
+				FCB781AB1B89E91A0045155D /* thinContentModel.h */,
+				FCB781AC1B89E91A0045155D /* thinContentModel.m */,
+				FCEAC5841B8C041200A64733 /* PassWordViewController.h */,
+				FCEAC5851B8C041200A64733 /* PassWordViewController.m */,
+				FCB7819A1B89DCF50045155D /* TitleTableViewController.h */,
+				FCB7819B1B89DCF50045155D /* TitleTableViewController.m */,
+				FCEBA6581B8AAC4F001FCAB9 /* ContentTableViewController.h */,
+				FCEBA6591B8AAC4F001FCAB9 /* ContentTableViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		FCEAC5881B8C042700A64733 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FCEAC5891B8C043600A64733 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCEAC5811B8C028600A64733 /* InputPasswordView.h */,
+				FCEAC5821B8C028600A64733 /* InputPasswordView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FCEAC58A1B8C044700A64733 /* Until */ = {
+			isa = PBXGroup;
+			children = (
+				FCB781A11B89E0C30045155D /* ThinDefine.h */,
+				FCB781A21B89E0C30045155D /* ThinDefine.m */,
+			);
+			name = Until;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,10 +353,12 @@
 				FCE77B4F1B89C0820015FA5F /* ViewController.m in Sources */,
 				FCEBA65A1B8AAC4F001FCAB9 /* ContentTableViewController.m in Sources */,
 				FCB781A31B89E0C30045155D /* ThinDefine.m in Sources */,
+				FCEAC5861B8C041200A64733 /* PassWordViewController.m in Sources */,
 				FCE77B4C1B89C0820015FA5F /* AppDelegate.m in Sources */,
 				FCB7819D1B89DCF50045155D /* TitleTableViewController.m in Sources */,
 				FCB781AD1B89E91A0045155D /* thinContentModel.m in Sources */,
 				FCE77B491B89C0820015FA5F /* main.m in Sources */,
+				FCEAC5831B8C028600A64733 /* InputPasswordView.m in Sources */,
 				FCB781A91B89E9070045155D /* thinItemModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +489,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Thin/Thin-Prefix.pch";
 				INFOPLIST_FILE = Thin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -456,6 +504,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Thin/Thin-Prefix.pch";
 				INFOPLIST_FILE = Thin/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
