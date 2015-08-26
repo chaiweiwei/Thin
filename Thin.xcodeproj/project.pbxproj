@@ -20,6 +20,7 @@
 		FCE77B541B89C0820015FA5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE77B531B89C0820015FA5F /* Images.xcassets */; };
 		FCE77B571B89C0820015FA5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE77B551B89C0820015FA5F /* LaunchScreen.xib */; };
 		FCE77B631B89C0820015FA5F /* ThinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE77B621B89C0820015FA5F /* ThinTests.m */; };
+		FCE9024D1B8D909E00034A61 /* UIView+MaterialDesign.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE9024C1B8D909E00034A61 /* UIView+MaterialDesign.m */; };
 		FCEAC5831B8C028600A64733 /* InputPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEAC5821B8C028600A64733 /* InputPasswordView.m */; };
 		FCEAC5861B8C041200A64733 /* PassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEAC5851B8C041200A64733 /* PassWordViewController.m */; };
 		FCEAC58D1B8C32EB00A64733 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEAC58C1B8C32EB00A64733 /* libsqlite3.0.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -65,6 +66,8 @@
 		FCE77B5C1B89C0820015FA5F /* ThinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE77B611B89C0820015FA5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCE77B621B89C0820015FA5F /* ThinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThinTests.m; sourceTree = "<group>"; };
+		FCE9024B1B8D909E00034A61 /* UIView+MaterialDesign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MaterialDesign.h"; sourceTree = "<group>"; };
+		FCE9024C1B8D909E00034A61 /* UIView+MaterialDesign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MaterialDesign.m"; sourceTree = "<group>"; };
 		FCEAC5811B8C028600A64733 /* InputPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPasswordView.h; sourceTree = "<group>"; };
 		FCEAC5821B8C028600A64733 /* InputPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPasswordView.m; sourceTree = "<group>"; };
 		FCEAC5841B8C041200A64733 /* PassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassWordViewController.h; sourceTree = "<group>"; };
@@ -211,6 +214,8 @@
 		FCEAC5891B8C043600A64733 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FCE9024B1B8D909E00034A61 /* UIView+MaterialDesign.h */,
+				FCE9024C1B8D909E00034A61 /* UIView+MaterialDesign.m */,
 				FCEAC5811B8C028600A64733 /* InputPasswordView.h */,
 				FCEAC5821B8C028600A64733 /* InputPasswordView.m */,
 			);
@@ -384,6 +389,7 @@
 				FCE77B491B89C0820015FA5F /* main.m in Sources */,
 				FCEAC5831B8C028600A64733 /* InputPasswordView.m in Sources */,
 				FCB781A91B89E9070045155D /* thinItemModel.m in Sources */,
+				FCE9024D1B8D909E00034A61 /* UIView+MaterialDesign.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

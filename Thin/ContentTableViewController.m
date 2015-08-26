@@ -24,8 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.estimatedRowHeight = 50;
-    self.tableView.rowHeight = 50;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 20;
+    self.tableView.tableFooterView = [[UIView alloc] init];
     
 }
 

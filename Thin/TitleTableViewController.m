@@ -11,6 +11,7 @@
 #import "ViewController.h"
 #import "ContentTableViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "UIView+MaterialDesign.h"
 
 @interface TitleTableViewController ()<UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate>
 
@@ -28,6 +29,10 @@
     [super viewWillAppear:animated];
     
     [self.saveButton setTitle:@"未保存" forState:UIControlStateNormal];
+    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 20;
+    self.tableView.tableFooterView = [[UIView alloc] init];
     
 }
 
@@ -82,7 +87,7 @@
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"titleCell"];
-
+    
     self.thinItemList = [[DBManager getShareInstance] queryAllFromItemTable];
     
     [self.tableView reloadData];
@@ -128,6 +133,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"titleCell" forIndexPath:indexPath];
     
+    cell.textLabel.numberOfLines = 0;
+    
     thinItemModel *model = _thinItemList[indexPath.row];
     cell.textLabel.text = model.name;
     
@@ -149,7 +156,12 @@
 
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     
-    [self performSegueWithIdentifier:@"content" sender:cell];
+//    CGPoint point = CGPointMake(cell.frame.size.width, cell.center.y);
+    
+//    [cell mdInflateAnimatedFromPoint:point backgroundColor:[UIColor sam_colorWithHex:@"#1A8EB4"] duration:0.5 completion:^{
+       [self performSegueWithIdentifier:@"content" sender:cell];
+//        cell.textLabel.textColor = [UIColor whiteColor];
+//    }];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
