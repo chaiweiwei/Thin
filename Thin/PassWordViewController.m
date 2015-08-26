@@ -22,6 +22,8 @@
     [super viewWillAppear:animated];
     
     self.title = @"hehe";
+    
+    [self.navigationController.navigationBar setTranslucent:NO];
 }
 
 - (void)viewDidLoad {

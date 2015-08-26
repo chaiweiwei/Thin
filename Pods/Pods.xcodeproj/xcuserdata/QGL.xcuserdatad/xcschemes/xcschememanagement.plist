@@ -29,15 +29,100 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SAMAddressBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAMBadgeView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAMCategories.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAMCircleProgressView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAMGradientView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAMHUDView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAMLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAMLoadingView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAMRateLimit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAMTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAMTextView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SAMWebView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0008019E79B7C6FF1A59B0F0C6415DEB</key>
+		<key>04F7714AA1762F5D19C69793658BCDE7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68624E72E5277C50F310B12A49A3B9E0</key>
+		<key>0D5CD639C647385CE9B7B32D612C8827</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>101B9FCBCA8D7E63191E588AF46C756A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1620C5CBAA4F5FA1EE730726EE93DFAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>459F4F5E9AEBF2B8212B06568BCA0D25</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5A76D9572F5EE7BE2CD6124B13737611</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5AA7F51130344CCBD8BC995DEBEDCA00</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +132,47 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79DCB2745B17712FDDA4046A1EB5B414</key>
+		<key>76930FF59527CC8A7F2C7EDC14EB729F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C14D93DED378B4C3CEB30F9AB6936C58</key>
+		<key>870FE58C2CEF57FEA645B3EE59EC9D70</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A1F2CE9AAE0E1C560A57FE7A23CC998</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A4205FFF02ABE737E259F8A74C0DB69E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B8AD360A450CE47B6D546A699E6D4D9F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B9602E892C8961F8A61C2E0CF6CEB893</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BFC29B22A4316256FC4DFDCF770E8D67</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C412F0BE14BEE2EAD0A4414EB45E2C3D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8178301E300D72C123A5559EE97476C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

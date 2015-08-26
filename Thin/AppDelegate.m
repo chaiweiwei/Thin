@@ -38,6 +38,13 @@
     
     sqlite3_close(database);
     
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                                           NSForegroundColorAttributeName:[UIColor redColor],
+                                                           NSFontAttributeName:[UIFont systemFontOfSize:19.0f]
+                                                           }];
+    
+//    [[UINavigationBar appearance] setTintColor:[UIColor greenColor]]; //字体的前景色   barTintColor是背景颜色
+    
     return YES;
 }
 

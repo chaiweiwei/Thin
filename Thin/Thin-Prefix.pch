@@ -17,5 +17,6 @@
 
 #import "DBManager.h"
 #import "ThinDefine.h"
+#import <SSToolkit/SSToolkit.h>
 
 #endif
