@@ -10,6 +10,7 @@
 
 @interface thinItemModel : MTLModel<MTLJSONSerializing>
 
+@property (nonatomic,copy) NSString *itemId;
 @property (nonatomic,copy) NSString *name;
 @property (nonatomic,copy) NSArray *itemList;
 

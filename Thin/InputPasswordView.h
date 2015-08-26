@@ -19,6 +19,8 @@
  *  6位支付密码输入完成的回调
  */
 @property (copy, nonatomic) void (^finishedInputBlock)(NSString *inputedPassword);
+@property (copy, nonatomic) void (^editInputBlock)(NSString *inputedPassword);
+@property (copy, nonatomic) void (^BeginInputBlock)(void);
 
 
 @end

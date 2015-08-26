@@ -12,9 +12,20 @@
 
 +(instancetype) getShareInstance;
 
-- (NSArray *)qurtyAllFromTable:(NSString *)tableName;
+- (NSArray *)queryAllFromItemTable;
+
+- (NSArray *)queryItemFromItemTableWithItemId:(NSString *)itemId;
+
+- (NSArray *)queryAllFromDetailTableFollowByItemId:(NSString *)ItemId;
+
+- (NSArray *)queryItemDetailFromDetailTableWithDetailId:(NSString *)DetailId;
+
+- (BOOL) saveDataToItemTable:(NSArray *)itemList;
+
+- (BOOL) saveDataToDetailTable:(NSArray *)itemList;
 
 - (BOOL) insertDataToItemTableWith:(NSString *)itemName;
 
+- (BOOL) insertDataToDetailTableWith:(NSString *)itemId dataNum:(NSNumber *)dataNum createdate:(NSString *)createdate;
 
 @end

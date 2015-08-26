@@ -30,8 +30,10 @@
 //             @"breastUpDesc" : @"breastUpDesc"
 //             };
     return @{
-             @"date" : @"date",
-             @"data" : @"data"
+             @"itemId":@"itemId",
+             @"detailId":@"detailId",
+             @"createDate" : @"createDate",
+             @"dataNum" : @"dataNum"
              };
 
 }

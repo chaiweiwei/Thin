@@ -33,9 +33,10 @@
 //
 //@property (nonatomic,copy) NSNumber *breastUp;
 //@property (nonatomic,copy) NSString *breastUpDesc;
-
-@property (nonatomic,copy) NSString *date;
-@property (nonatomic,copy) NSNumber *data;
+@property (nonatomic,copy) NSString *itemId;
+@property (nonatomic,copy) NSString *detailId;
+@property (nonatomic,copy) NSString *createDate;
+@property (nonatomic,copy) NSNumber *dataNum;
 
 
 @end

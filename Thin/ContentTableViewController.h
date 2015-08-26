@@ -10,7 +10,7 @@
 
 @interface ContentTableViewController : UIViewController
 
-@property (nonatomic,copy) NSString *thinItemName;
+@property (nonatomic,copy) NSString *itemId;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

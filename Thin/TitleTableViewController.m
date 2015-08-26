@@ -10,6 +10,7 @@
 #import "thinItemModel.h"
 #import "ViewController.h"
 #import "ContentTableViewController.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface TitleTableViewController ()<UIAlertViewDelegate,UITableViewDataSource,UITableViewDelegate>
 
@@ -27,16 +28,7 @@
     [super viewWillAppear:animated];
     
     [self.saveButton setTitle:@"未保存" forState:UIControlStateNormal];
-
-}
-
-- (NSURL *)getFilePath {
-
-    NSURL *url = [[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask].lastObject;
     
-    url = [url URLByAppendingPathComponent:@"content.plist"];
-    
-    return url;
 }
 
 -(UIAlertView *)alertTitleView {
@@ -70,8 +62,11 @@
     switch (alertView.tag) {
         case 12:
             if(buttonIndex == 1 && text.text.length > 0) {
+                thinItemModel *model = [[thinItemModel alloc] init];
+                model.name = text.text;
+                
                 NSMutableArray *tempArray = [self.thinItemList mutableCopy];
-                [tempArray addObject:@{@"name":text.text}];
+                [tempArray addObject:model];
                 
                 self.thinItemList = [tempArray copy];
                 
@@ -88,13 +83,15 @@
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"titleCell"];
 
-    _thinItemList = [NSKeyedUnarchiver unarchiveObjectWithFile:[self getFilePath].path];
+    self.thinItemList = [[DBManager getShareInstance] queryAllFromItemTable];
+    
     [self.tableView reloadData];
 
 }
 
 - (IBAction)saveAction:(id)sender {
-    [NSKeyedArchiver archiveRootObject:_thinItemList toFile:[self getFilePath].path];
+
+    [[DBManager getShareInstance] saveDataToItemTable:self.thinItemList];
     
     [sender setTitle:@"已保存" forState:UIControlStateNormal];
 }
@@ -131,8 +128,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"titleCell" forIndexPath:indexPath];
     
-    NSDictionary *model = _thinItemList[indexPath.row];
-    cell.textLabel.text = model[@"name"];
+    thinItemModel *model = _thinItemList[indexPath.row];
+    cell.textLabel.text = model.name;
     
     return cell;
 }
@@ -158,9 +155,11 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if([segue.identifier isEqualToString:@"content"]) {
+        
         ContentTableViewController *vc = segue.destinationViewController;
         NSInteger row = [self.tableView indexPathForCell:sender].row;
-        vc.thinItemName = _thinItemList[row][@"name"];
+        thinItemModel *model = _thinItemList[row];
+        vc.itemId = model.itemId;
     }
 }
 @end

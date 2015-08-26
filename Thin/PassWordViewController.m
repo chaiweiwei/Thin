@@ -10,6 +10,9 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 
 @interface PassWordViewController ()
+{
+    LogingAnimationType AnimationType;
+}
 
 @end
 
@@ -18,7 +21,7 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    self.title = @"机密档案";
+    self.title = @"hehe";
 }
 
 - (void)viewDidLoad {
@@ -38,11 +41,66 @@
         }
         
     }];
+    
+    [self.passWordView setBeginInputBlock:^{
+        
+        if(AnimationType == LogingAnimationType_PWD) {
+            return ;
+        }
+        
+        [self AnimationUserToPassword];
+        AnimationType = LogingAnimationType_PWD;
+        
+    }];
 }
+
+#pragma mark 移开手动画
+-(void)AnimationPasswordToUser{
+    
+    [UIView animateWithDuration:0.5f animations:^{
+        
+        self.left_look.frame = CGRectMake(self.left_look.frame.origin.x - 80, self.left_look.frame.origin.y, 40, 40);
+        self.right_look.frame = CGRectMake(self.right_look.frame.origin.x + 40, self.right_look.frame.origin.y, 40, 40);
+        
+        self.right_hidden.frame = CGRectMake(self.right_hidden.frame.origin.x+55, self.right_hidden.frame.origin.y+40, 40, 66);
+        self.left_hidden.frame = CGRectMake(self.left_hidden.frame.origin.x-60, self.left_hidden.frame.origin.y+40, 40, 66);
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+    
+}
+
+#pragma mark 捂眼
+-(void)AnimationUserToPassword{
+    [UIView animateWithDuration:0.5f animations:^{
+        
+        self.left_look.frame = CGRectMake(self.left_look.frame.origin.x + 80, self.left_look.frame.origin.y, 0, 0);
+        self.right_look.frame = CGRectMake(self.right_look.frame.origin.x - 40, self.right_look.frame.origin.y, 0, 0);
+        
+        self.right_hidden.frame = CGRectMake(self.right_hidden.frame.origin.x-55, self.right_hidden.frame.origin.y-40, 40, 66);
+        self.left_hidden.frame = CGRectMake(self.left_hidden.frame.origin.x+60, self.left_hidden.frame.origin.y-40, 40, 66);
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)endEdit:(id)sender {
+    if (AnimationType == LogingAnimationType_PWD) {
+        [self AnimationPasswordToUser];
+    }
+    AnimationType = LogingAnimationType_NONE;
+    [self.view endEditing:YES];
+
+}
+
+
 
 
 @end

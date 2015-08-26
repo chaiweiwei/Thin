@@ -50,6 +50,8 @@
     self.inputNum = sender.text.length;
     if (self.inputNum == kInputNumCount) {
         !self.finishedInputBlock?:self.finishedInputBlock(self.responsder.text);
+    } else {
+        !self.editInputBlock?:self.editInputBlock(self.responsder.text);
     }
     [self setNeedsDisplay];
 }
@@ -78,6 +80,8 @@
 
 - (void)tap {
     [self.responsder becomeFirstResponder];
+    
+    !self.BeginInputBlock?:self.BeginInputBlock();
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

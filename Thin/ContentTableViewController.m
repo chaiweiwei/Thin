@@ -7,6 +7,7 @@
 //
 
 #import "ContentTableViewController.h"
+#import "thinContentModel.h"
 
 @interface ContentTableViewController ()<UIAlertViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -36,19 +37,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    NSArray *dataList = [NSKeyedUnarchiver unarchiveObjectWithFile:[self getFilePath].path];
-    
-    [dataList enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
-        if([obj[@"name"] isEqualToString:self.thinItemName]) {
-            self.itemList = obj[@"items"];
-            
-            [self.tableView reloadData];
-            
-            *stop = YES;
-        }
-        
-    }];
-    
+    self.itemList = [[DBManager getShareInstance] queryAllFromDetailTableFollowByItemId:self.itemId];
 }
 
 - (NSArray *)itemList {
@@ -58,14 +47,6 @@
     return _itemList;
 }
 
-- (NSURL *)getFilePath {
-    
-    NSURL *url = [[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask].lastObject;
-    
-    url = [url URLByAppendingPathComponent:@"content"];
-    
-    return url;
-}
 
 - (IBAction)addContent:(id)sender {
     
@@ -73,28 +54,8 @@
 }
 
 - (IBAction)saveAction:(id)sender {
-    NSMutableArray *dataList = [[NSKeyedUnarchiver unarchiveObjectWithFile:[self getFilePath].path] mutableCopy];
     
-    __block NSDictionary *deletDict;
-    __block NSInteger index;
-    
-    [dataList enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL *stop) {
-        if([obj[@"name"] isEqualToString:self.thinItemName]) {
-            deletDict = obj;
-            index = idx;
-        }
-    }];
-    
-    [dataList removeObject:deletDict];
-    
-    deletDict = @{
-                  @"name":self.thinItemName,
-                  @"items":self.itemList
-                  };
-    
-    [dataList insertObject:deletDict atIndex:index];
-    
-    [NSKeyedArchiver archiveRootObject:[dataList copy] toFile:[self getFilePath].path];
+    [[DBManager getShareInstance] saveDataToDetailTable:self.itemList];
     
     [sender setTitle:@"已保存" forState:UIControlStateNormal];
 }
@@ -120,16 +81,17 @@
     UITextField *text = [alertView textFieldAtIndex:0];
     
     if(buttonIndex == 1 && text.text.length > 0) {
-        NSDictionary *dict = @{
-                               @"content":text.text,
-                               @"date":[self.formatter stringFromDate:[NSDate date]],
-                               };
+
+        thinContentModel *model = [[thinContentModel alloc] init];
+        model.itemId = self.itemId;
+        model.dataNum = [NSNumber numberWithFloat:text.text.floatValue];
+        model.createDate = [self.formatter stringFromDate:[NSDate date]];
         
         NSMutableArray *tempArray = [self.itemList mutableCopy];
-        [tempArray addObject:dict];
+        [tempArray addObject:model];
         
         self.itemList = [tempArray copy];
-        
+
         [self.tableView reloadData];
     }
 }
@@ -160,9 +122,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
     }
     
-    NSDictionary *model = self.itemList[indexPath.row];
-    cell.textLabel.text = model[@"content"];
-    cell.detailTextLabel.text = model[@"date"];
+    thinContentModel *model = self.itemList[indexPath.row];
+    cell.textLabel.text = model.dataNum.stringValue;
+    cell.detailTextLabel.text = model.createDate;
     return cell;
 }
 
